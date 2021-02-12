@@ -1,0 +1,243 @@
+/* s'applique à TOUS les éléments des pages du site */
+*{
+    box-sizing: border-box;
+}
+
+
+a{
+    text-decoration: none; /* retire le soulignement sur tous les liens */
+}
+/****************Page index*******************/
+#entete{
+    /* vh= viewport height 100vh=100% hauteur visible,*/
+    /*vw = viewport width 100vw=100% largeur*/
+    /* vmin = viewport min vw ou vh, selon le plus petit des deux*/
+    /* vmax = viewport max idem à vmin*/
+    height: 100vh;
+
+    /* image de fond */
+    background-color: l#1C5FBA;
+    background-image: url("../images/fond2.jpg");/* .. permet de sortir du dossier css*/
+    opacity: 0.9;
+    height: 35rem;
+    background-position: center; /*position image header*/
+    background-size: cover; /* on couvre le header avec l'image sans la déformer (perte de certaines parties de l'image*/
+    /* background-attachment: fixed; permet de fige le fond*/
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between; /* repartition horizontale*/
+    align-items: center; /*alignement vertical*/
+    background-color: #4e70ce;
+    padding-left: 50px;
+    padding-right: 50px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    /* permet au menu nav de rester devant*/
+    z-index: 1;
+}
+
+header nav img{
+    width: 70px; /* reduit le logo */
+}
+
+header nav ul li{
+    display: inline; /* met côte-côte et retire les puces*/
+    margin-left: 20px; /* pour ne pas décentrer les bords*/
+    
+}
+
+header nav li a{
+    color: black;
+    text-transform: uppercase; /* mettre en majuscule */
+    background-color: #4e70ce;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+header section:first-of-type{ /*première du type*/
+    /* 4 lignes magiques pour centrer parfaitement un bloc*/
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -90%);
+    text-align: center;
+    background-color: #3a63af;
+    /* reprise cours */
+    width: 50%;
+    padding: 2%;
+    opacity: 0.9;
+    border-radius: 10px;
+}
+
+/* la dernière balise section dans header */
+header section:last-child{
+    position: absolute;
+    bottom: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+
+header section a{
+    border: 1px;
+    border-radius: 10px; 
+    padding: 3.5%; 
+    background-color: #3a63af;
+    color: black;
+    opacity: 0.9;
+
+}
+
+/*************** main ***********************/
+main{
+    padding: 40px;
+}
+
+/* adaptation des images à l'écran*/
+main img{
+    width: 100%;
+}
+
+main section h1{
+    text-align: center;
+}
+
+/* flexbox compétences et réalisations */
+main section div{
+    display: flex;
+    text-align: center;
+}
+
+main section div article{
+    flex: 1;
+    padding: 10px;
+}
+/* réalisation*/
+
+/* compétences */
+main section:last-of-type div article{
+    border: 1px solid lightgrey;
+}
+
+main section:last-of-type div article div{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /*grid-template-columns: repeat(3, 1fr); est possible aussi*/
+    /* gap: 30px; */
+    row-gap: 10px;
+    column-gap: 30px;
+}
+
+/**************** footer*****************/
+footer{
+    padding: 50px;
+}
+h1{
+    text-align: center;
+}
+
+footer div{
+    display: flex;
+}
+
+footer div form{
+    flex: 4;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+footer div aside{
+    flex: 1;
+}
+
+form h2{
+    text-align: center;
+    grid-column: 1 / 3;
+}
+
+form button{
+    grid-column: 1 /3;
+    width: max-content;
+    margin: auto;
+}
+
+#labelprenom{
+    margin-left: 10%;
+}
+
+#labelemail{
+    margin-left: 9%;
+}
+#social{
+    display: flex;
+    text-align: justify;
+}
+
+footer article ul li{
+    display: inline; /* met côte-côte et retire les puces*/
+    text-align: center;
+    
+}
+[href*="twitter.com"]{
+    color: #0e4892;
+}
+
+[href*="facebook.com"]{
+    color: #0e4892;
+}
+
+[href*="lindedin.com"]{
+    color: #0e4892;
+}
+
+[href*="github.com"]{
+    color: #0e4892;
+}
+
+/************************************************************************
+                   Page projet blog                                     *
+*************************************************************************/
+
+#banniere
+{
+	margin-top: 15px;
+	height: 200px;
+	border-radius: 5px;
+	position: relative;
+	box-shadow: 0px 4px 4px #1c1a19;
+	margin-bottom: 25px;
+}
+
+#capture-blog1{
+    width: 70%;
+	border-radius: 5px;
+	box-shadow: 0px 4px 4px #1c1a19;
+	margin-bottom: 25px;
+} 
+
+#projet-blog{
+    display: block;
+    text-align: left;
+}
+
+#image-auteur{
+    width: 95%;
+    height: rem;
+	border-radius: 5px;
+	box-shadow: 0px 4px 4px #1c1a19;
+	margin-bottom: 25px; 
+}
+
+#image-blog{
+    width: 92%;
+    height: rem;
+	border-radius: 5px;
+	box-shadow: 0px 4px 4px #1c1a19;
+	margin-bottom: 25px; 
+}
